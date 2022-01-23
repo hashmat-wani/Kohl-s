@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css link -->
+    <link rel="stylesheet" href="menshomepage.css" />
+    <!-- Bootstrap plugin -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Mens</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="left-container">
+        <h5>Men's Clothing</h5>
+        <ul class="list-start">
+          <!-- List 1 -->
+          <li>
+            <h6>Shop New Brands!</h6>
+            <ul class="list-items">
+              <li>Calvin Klein</li>
+              <li>Eddie Bauer</li>
+              <li>Tommy Hilfiger</li>
+            </ul>
+          </li>
+          <hr class="list-hr" />
+          <!-- List 2 -->
+          <li>
+            <h6>Shop by Size Range</h6>
+            <ul class="list-items">
+              <li>Big & Tall</li>
+              <li>Regular Size</li>
+              <li>Slim Fit</li>
+              <li>Young Men's</li>
+            </ul>
+          </li>
+          <hr class="list-hr" />
+          <!-- List 3 -->
+          <li>
+            <h6>Featured Brands</h6>
+            <ul class="list-items">
+              <li onclick="window.location.href='mensproduct.html'">
+                Shop All Brands
+              </li>
+              <li onclick="sortByAdidas()">Adidas</li>
+              <li onclick="sortByReebok()">Reebok</li>
+              <li onclick="sortByGrandSlam()">Grand Slam</li>
+              <li onclick="sortByFLX()">FLX</li>
+              <li onclick="sortByCalvinKlein()">Calvin Klein</li>
+              <li onclick="sortByChampion()">Champion</li>
+              <li onclick="sortByAntigua()">Antigua</li>
+            </ul>
+          </li>
+          <hr class="list-hr" />
+
+          <!-- List 4 -->
+          <li>
+            <h6>Accesories & More</h6>
+            <ul class="list-items">
+              <li>Belts</li>
+              <li>Cologne</li>
+              <li>Grooming</li>
+              <li>Hats, Gloves & Scarves</li>
+              <li>Jewelry</li>
+              <li>Slippers</li>
+              <li>Suspenders</li>
+              <li>Ties</li>
+              <li>Wallets</li>
+              <li>Watches</li>
+            </ul>
+          </li>
+          <hr class="list-hr" />
+          <!-- List 5 -->
+          <li>
+            <h6>Trends & Shops</h6>
+            <ul class="list-items">
+              <li>Dress Clothes</li>
+              <li>Gift Shop</li>
+              <li>Golf Clothing & Equipment</li>
+              <li>The Print Shop</li>
+              <li>Slim Fit Shop</li>
+              <li>Sports Fan Shop</li>
+            </ul>
+          </li>
+          <hr class="list-hr" />
+          <!-- List 6 -->
+          <li>
+            <h6>Shop by Category</h6>
+            <ul class="list-items">
+              <li>Blazers & Sportcoats</li>
+              <li>Casual Button-Downs</li>
+              <li>Coats & Jackets</li>
+              <li>Dress Shirts</li>
+              <li>Graphic Tees</li>
+              <li>Hoodies & Sweatshirts</li>
+              <li>Jeans</li>
+              <li>Outdoor Clothing</li>
+              <li>Pajamas & Robes</li>
+              <li>Pants & Joggers</li>
+              <li>Polos</li>
+              <li>Shirts & Tees</li>
+              <li>Shoes & Sandals</li>
+              <li>Shorts</li>
+              <li>Socks</li>
+              <li>Suits & Suit Separates</li>
+              <li>Sweaters</li>
+              <li>Swimwear</li>
+              <li>Tank Tops</li>
+              <li>Thermal Clothing</li>
+              <li>Undershirts</li>
+              <li>Underwear</li>
+              <li>Vests</li>
+              <li>Workout & Activewear</li>
+              <li>Workwear</li>
+              <li>Shop All Men's Clothing</li>
+            </ul>
+          </li>
+          <hr class="list-hr" />
+        </ul>
+      </div>
+      <!-- Right Container -->
+      <div id="right-container">
+        <div class="mens-head"><h4>MEN'S</h4></div>
+        <div id="header-hero">
+          <h2>Time For a fresh start.</h2>
+          <p>Shop Activewear</p>
+          <img
+            class="header-hero"
+            src="https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-header-hero-d?scl=1&fmt=pjpeg"
+            alt="header-hero-d"
+          />
+        </div>
+        <div id="Second-section">
+          <h4 class="cooler-styles-head">Cool styles for cooler days.</h4>
+          <div id="cooler-styles">
+            <div class="cooler-styles">
+              <div>
+                <div class="cooler-styles-names"><h6>Athleisure</h6></div>
+              </div>
+              <div>
+                <div class="right-top-images hoodie">
+                  <div class="cooler-styles-names">
+                    <h6>Hoodies & Sweatshirts</h6>
+                  </div>
+                </div>
+                <div class="right-images button-down">
+                  <div class="cooler-styles-names">
+                    <h6>Button-Down Shirts</h6>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="right-top-images jeans">
+                  <div class="cooler-styles-names"><h6>Jeans & Pants</h6></div>
+                </div>
+                <div class="right-images graphic-tees">
+                  <div class="cooler-styles-names"><h6>Graphic Tees</h6></div>
+                </div>
+              </div>
+              <div>
+                <div class="right-top-images jackets">
+                  <div class="cooler-styles-names">
+                    <h6>Coats & Jackets</h6>
+                  </div>
+                </div>
+                <div class="right-images accesories">
+                  <div class="cooler-styles-names"><h6>Accesories</h6></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Poster -->
+        <div id="deals-poster">
+          <div class="left-poster">
+            <h2>So. Many.</h2>
+            <h1>DEALS.</h1>
+          </div>
+          <div class="right-poster">
+            <h4>Add to cart. Done!</h4>
+            <b>select styles. In store & online</b>
+            <button>Shop Now</button>
+          </div>
+        </div>
+        <!-- Brands -->
+        <h3 class="brands-title">Most-loved brands</h3>
+        <div id="brands">
+          <div class="sonoma">
+            <div class="cooler-styles-names brand-1">
+              <h3>SONOMA</h3>
+              <p>GOODS FOR LIFE</p>
+            </div>
+          </div>
+          <div class="ck">
+            <div class="cooler-styles-names brand-2">
+              <h3>CALVIN KLEIN</h3>
+            </div>
+          </div>
+          <div class="th">
+            <div class="cooler-styles-names brand-3">
+              <img
+                src="https://logos-download.com/wp-content/uploads/2016/02/Tommy_Hilfiger_logo_transparent.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="eb">
+            <div class="cooler-styles-names brand-4">
+              <span
+                ><img
+                  src="	https://seeklogo.com/images/E/Eddie_Bauer-logo-1C51865738-seeklogo.com.png"
+                  alt=""
+              /></span>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <p class="grid-seo--paragraph">
+            See <a href="/sale-event/coupons-deals.jsp">Kohl's Coupons</a> for
+            the details and terms of our current offers and events.
+          </p>
+
+          <h6>MEN</h6>
+          <hr />
+          <p>
+            Men’s clothing has seen many stylistic changes in the last decade.
+            Of note, both casual menswear and formal menswear have slimmed down
+            in recent years, becoming more tailored and fitted. Meanwhile,
+            colors and patterns run from bold to muted and classic to
+            contemporary. No matter what you’re looking for, Kohl’s is sure to
+            provide comfortable, quality khakis, polos, jeans and suits that
+            will look great and suit your needs.
+          </p>
+
+          <p>
+            Explore casual men’s clothes like khakis,
+            <a
+              href="/catalog/mens-tshirts-tops-clothing.jsp?CN=Gender:Mens+Silhouette:T-Shirts+Category:Tops+Department:Clothing"
+              >men’s T-shirts</a
+            >, polo shirts and everyday essential jeans. From relaxed fit to
+            slim fit, Kohl’s men’s jeans offer a wide variety of cuts and washes
+            for your comfort. Look sharp and feel confident for business
+            meetings and special events in a comfortable suit or blazer from
+            Kohl’s. Don’t forget the importance of fit — find your size no
+            matter what it is, from short pants to
+            <a
+              href="/catalog/mens-big-tall-outerwear-clothing.jsp?CN=Gender:Mens+SizeRange:Big%20%26%20Tall+Category:Outerwear+Department:Clothing"
+              >big and tall jackets</a
+            >.
+          </p>
+
+          <p>
+            Don’t forget accessories like
+            <a
+              href="/catalog/mens-ties-accessories-accessories.jsp?CN=Gender:Mens%20Product:Ties%20Department:Accessories"
+              >ties</a
+            >, belts, wallets and cufflinks for a polished look. With everything
+            from pants to men’s dress shirts and shoes, Kohl’s has both modern
+            and timeless men’s fashion to keep you in style for any occasion.
+          </p>
+
+          <p>
+            Look for inspiration and ideas on how to build your total wardrobe
+            by checking out our blog! There, you can find lots of styling
+            guidance,
+            <a href="/ideas/category/active">ideas for your active ensemble</a>,
+            and other
+            <a href="/ideas/category/apparel">apparel-focused content</a> that
+            will point you in the right direction!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var brand1 = { brandname: "Adidas" };
+  var brand2 = { brandname: "Reebok" };
+  var brand3 = { brandname: "Grand Slam" };
+  var brand4 = { brandname: "FLX" };
+  var brand5 = { brandname: "Calvin Klein" };
+  var brand6 = { brandname: "Champion" };
+  var brand7 = { brandname: "Antigua" };
+  function sortByAdidas() {
+    localStorage.setItem("navbrand", JSON.stringify(brand1));
+    window.location.href = "mensproduct.html";
+  }
+  function sortByReebok() {
+    localStorage.setItem("navbrand", JSON.stringify(brand2));
+    window.location.href = "mensproduct.html";
+  }
+  function sortByGrandSlam() {
+    localStorage.setItem("navbrand", JSON.stringify(brand3));
+    window.location.href = "mensproduct.html";
+  }
+  function sortByFLX() {
+    localStorage.setItem("navbrand", JSON.stringify(brand4));
+    window.location.href = "mensproduct.html";
+  }
+  function sortByCalvinKlein() {
+    localStorage.setItem("navbrand", JSON.stringify(brand5));
+    window.location.href = "mensproduct.html";
+  }
+  function sortByChampion() {
+    localStorage.setItem("navbrand", JSON.stringify(brand6));
+    window.location.href = "mensproduct.html";
+  }
+  function sortByAntigua() {
+    localStorage.setItem("navbrand", JSON.stringify(brand7));
+    window.location.href = "mensproduct.html";
+  }
+</script>
