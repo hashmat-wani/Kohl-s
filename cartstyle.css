@@ -68,7 +68,6 @@
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .checkout-details {
-  text-align: left;
   color: red;
   text-decoration: underline;
   margin-bottom: 30px;
@@ -122,4 +121,21 @@
 .saving {
   margin-top: 30px;
   color: red;
+}
+.rmvbtn {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  margin: 20px 0;
+  border: none;
+  padding: 5px 0;
+  border-radius: 30px;
+  width: 25%;
+  background: #202020;
+  background: tomato;
+  color: wheat;
+}
+.rmvbtn:hover {
+  background: orangered;
+  color: white;
+  transform: scale(0.9, 0.9);
 }
