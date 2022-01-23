@@ -37,6 +37,7 @@
         <button onclick="window.location.href='checkout.html'">CHECKOUT ₹<span class="checkout">00.00</span></button>
       </div>
     </div>
+    <div class="line"></div>
 
     <div id="container">
       <div class="cart-list"></div>
@@ -63,7 +64,7 @@
               <h4>Total</h4>
               <h4 class="grandtotal"></h4class>
           </div>
-        <h1></h1>
+        <h4 class="saving"></h4>
           
       </div>
     </div>
@@ -120,6 +121,7 @@
       document.querySelector(".discount").textContent=`₹ ${discount}.00`;
       document.querySelector(".grandtotal").textContent=`₹ ${totalprice-discount}.00`; 
       document.querySelector(".checkout").textContent=`${totalprice-discount}.00`;
+      document.querySelector(".saving").textContent=`You’re saving ₹${discount}.00!`;
     }
   </script>
 </html>

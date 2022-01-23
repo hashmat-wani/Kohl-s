@@ -22,6 +22,10 @@
   border-top-right-radius: 10px;
   padding: 0 30px;
 }
+.line {
+  height: 23px;
+  background: #14718a;
+}
 #container {
   display: flex;
 }
@@ -47,6 +51,7 @@
   padding-bottom: 20px;
 }
 .checkout-list {
+  text-align: center;
   margin: 30px;
   width: 40%;
   padding: 60px 20px;
@@ -78,4 +83,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+.saving {
+  margin-top: 30px;
+  color: red;
 }
