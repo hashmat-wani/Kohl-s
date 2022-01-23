@@ -58,6 +58,27 @@
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+@media only screen and (max-width: 900px) {
+  #container {
+    flex-direction: column;
+  }
+  .checkout-list {
+    width: 100%;
+  }
+  .cart-list {
+    width: 100%;
+  }
+  .cart-list > div {
+    flex-direction: column;
+  }
+  .imgdiv {
+    width: 100%;
+  }
+  .detaildiv {
+    width: 100%;
+    padding: 20px;
+  }
+}
 .checkout-list > div {
   display: flex;
   justify-content: space-between;
