@@ -86,7 +86,7 @@
                   font-size: small;
                   font-weight: 500;
                   color: gray;
-                  margin-left: 50px;
+                  margin-left: 35px;
                   cursor: pointer;
                 "
                 id="show"
@@ -228,11 +228,11 @@
     if (count == 1) {
       val.type = "text";
 
-      return (document.querySelector("#show").textContent = "Hide password");
+      return (document.querySelector("#show").textContent = "Hide Password");
     } else {
       val.type = "password";
       count = 0;
-      return (document.querySelector("#show").textContent = "Show password");
+      return (document.querySelector("#show").textContent = "Show Password");
     }
   }
 </script>
