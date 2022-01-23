@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="icon"
+      href="https://png.pngitem.com/pimgs/s/133-1334238_kohls-gift-card-png-transparent-png.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" media="screen" href="nav-footer_style.css" />
+    <link rel="stylesheet" href="signUp.css" />
+  </head>
+
+  <body>
+    <!----banner----- -->
+    <div class="banner"></div>
+
+    <!-- --nav bar----->
+    <nav class="navbar sticky-top navbar-expand-md navbar-light"></nav>
+
+    <!-- ----container 1--- -->
+
+    <div id="container">
+      <div id="content">
+        <h3 style="font-family: calibri">Create Account</h3>
+        <p style="color: rgb(0, 0, 0)">
+          By creating an account,you agree to Kohl's
+          <a href="#" style="color: gray">Security & Privacy Policy</a> and
+          <a style="color: gray" href="#">Legal Notices.</a>
+        </p>
+
+        <form id="medcon">
+          <div id="first" class="medcon">
+            <div class="inputName">First Name</div>
+            <div style="margin-top: 0px">
+              <input type="text" id="firstNam" class="input" />
+            </div>
+          </div>
+          <div class="medcon">
+            <div class="inputName">Last Name</div>
+            <div style="margin-top: 0px">
+              <input type="text" id="lastNam" class="input input1" />
+            </div>
+          </div>
+          <div id="eamilbox" class="medcon">
+            <div class="inputName">Email Address</div>
+            <div style="margin-top: 0px; height: 78px">
+              <input
+                type="text"
+                id="email"
+                class="input"
+                placeholder="name@mail.com"
+              />
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" class="check" />
+              <div class="keepme">
+                <h4>Keep me signed in</h4>
+              </div>
+            </div>
+            <div>
+              <p style="margin-top: 0px; font-family: calibri">
+                Check this box to stay signed in on this device. Recommended for
+                devices that only you use.
+              </p>
+            </div>
+          </div>
+
+          <div id="Last" class="medcon">
+            <div class="inputName psd">
+              Password
+              <span>
+                <a
+                  onclick="hidepass()"
+                  style="
+                    font-size: small;
+                    font-weight: 500;
+                    color: gray;
+                    margin-left: 105px;
+                    cursor: pointer;
+                  "
+                  id="show"
+                  >Show password</a
+                ></span
+              >
+            </div>
+            <div style="margin-top: 0px">
+              <input
+                type="password"
+                id="password"
+                class="input input1"
+                placeholder="Should not be same as email"
+              />
+            </div>
+          </div>
+
+          <div class="line">
+            <hr />
+          </div>
+          <br />
+          <div id="img">
+            <div>
+              <img
+                src="https://www.kohls.com/account/media/42.0.0-684/images/loyaltyV2/kohls-rewards-horizontal.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                id="question"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjVs9qcCmr9f-bLquq8Syj0IKCKlNKpAGCCQ&usqp=CAU"
+                alt=""
+              />
+            </div>
+          </div>
+          <br />
+          <div id="threecheck">
+            <div>
+              <div class="roundbox">
+                <input
+                  id="signed"
+                  name="drone"
+                  class="roundcheck"
+                  type="radio"
+                />
+              </div>
+              <div class="roundBoxName">
+                <label for="signed">I signed up In store</label>
+              </div>
+              <div class="roundbox" style="margin-left: 5px">
+                <input
+                  name="drone"
+                  id="enroll"
+                  class="roundcheck"
+                  type="radio"
+                />
+              </div>
+              <div class="roundBoxName">
+                <label for="signed">Enroll Today!</label>
+              </div>
+              <div class="roundbox" style="margin-left: 5px">
+                <input name="drone" id="no" class="roundcheck" type="radio" />
+              </div>
+              <div class="roundBoxName">
+                <label for="signed">No Thanks.</label>
+              </div>
+            </div>
+            <div class="line1">
+              <hr />
+            </div>
+            <div class="checkbox checkbox1">
+              <input type="checkbox" class="check" />
+              <div class="keepme keepme1">
+                <p>
+                  <span class="span">Yes sign me up!</span>I'd like to receive
+                  Kohl's e-mail offers, updates on sales and events and more! US
+                  Residents Only. Get 15% off your next purchase. Terms apply;
+                  see details.
+                  <a style="color: black" href="#">Privacy Policy.</a>
+                </p>
+              </div>
+            </div>
+            <div id="submitbox">
+              <div style="width: auto">
+                <input id="submit1" type="submit" value="CREATE ACCOUNT" />
+              </div>
+              <div id="cancel"><a style="color: black" href="">CANCEL</a></div>
+            </div>
+          </div>
+        </form>
+        <!-- <form id=form>
+                <div><div><div><div><input id="nam" type="text"></div></div></div></div>
+                <div><div><div><div><div><input type="submit"></div></div></div></div></div>
+            </form> -->
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+  $(function () {
+    $(".banner").load("banner.html");
+    $(".navbar").load("nav.html");
+    $("#footer").load("footer.html");
+  });
+  document.querySelector("form").addEventListener("submit", formSubmit);
+  var formArr = JSON.parse(localStorage.getItem("userdata")) || [];
+  function formSubmit(event) {
+    event.preventDefault();
+    var firstName = document.querySelector("#firstNam").value;
+    var lastName = document.querySelector("#lastNam").value;
+    var name = firstName + lastName;
+    var email = document.querySelector("#email").value;
+    var passwrod = document.querySelector("#password").value;
+    var fromobj = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      passwrod: passwrod,
+    };
+
+    if (firstName != "" && lastName != "" && email != "" && passwrod != "") {
+      alert("SignUp Sucessful");
+      formArr.push(fromobj);
+      localStorage.setItem("userdata", JSON.stringify(formArr));
+      //  please connect login page here
+      //  window.location.herf=""
+    } else {
+      alert("Enter all details");
+    }
+  }
+  var count = 0;
+  function hidepass() {
+    count++;
+    console.log(count);
+    var val = document.querySelector("#password");
+
+    if (count == 1) {
+      val.type = "text";
+
+      return (document.querySelector("#show").textContent = "Hide password");
+    } else {
+      val.type = "password";
+      count = 0;
+      return (document.querySelector("#show").textContent = "Show password");
+    }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
