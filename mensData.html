@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var mensData = [
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4485815_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's adidas Tiro 21 Track Pants",
+      price: 445,
+      strikedoffprice: 636,
+      brand: "Adidas",
+      rating: "(2375)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4882714_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's adidas Feel Cozy Pullover Fleece Hoodie",
+      price: 456,
+      strikedoffprice: 589,
+      brand: "Adidas",
+      rating: "(237)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4486830_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's adidas Jersey Joggers",
+      price: 460,
+      strikedoffprice: 689,
+      brand: "Adidas",
+      rating: "(237)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4485528_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's adidas Designed 2 Move Shorts",
+      price: 360,
+      strikedoffprice: 453,
+      brand: "Adidas",
+      rating: "(745)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4882606_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's adidas Essentials Fleece Jogger",
+      price: 477,
+      strikedoffprice: 599,
+      brand: "Adidas",
+      rating: "(745)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4889609_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Reebok Identity Fleece Hoodie",
+      price: 585,
+      strikedoffprice: 789,
+      brand: "Reebok",
+      rating: "(75)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4889612_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Reebok Identity Fleece Hoodie",
+      price: 625,
+      strikedoffprice: 789,
+      brand: "Reebok",
+      rating: "(5)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5050047_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Reebok Identity Classic Tee",
+      price: 295,
+      strikedoffprice: 539,
+      brand: "Reebok",
+      rating: "(6)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/3886461_Vector_Navy_White?wid=300&hei=300&op_sharpen=1",
+      name: "Men's Reebok Training Supply Activchill Tee",
+      price: 224,
+      strikedoffprice: 489,
+      brand: "Reebok",
+      rating: "(6)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4889624_Blue_Slate?wid=300&hei=300&op_sharpen=1",
+      name: "Men's Reebok Identity Fleece Joggers",
+      price: 465,
+      strikedoffprice: 687,
+      brand: "Reebok",
+      rating: "(9)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4638777_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's FLX Dynamic Stretch Button-Down Shirt",
+      price: 424,
+      strikedoffprice: 789,
+      brand: "FLX",
+      rating: "(654)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5023468_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's FLX Lightweight Active Bomber",
+      price: 770,
+      strikedoffprice: 989,
+      brand: "FLX",
+      rating: "(6554)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5017843_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's FLX Commuter Fleece Pullover Hoodie",
+      price: 738,
+      strikedoffprice: 980,
+      brand: "FLX",
+      rating: "(6556)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5018712_Discreet_Green?wid=245&hei=240&op_sharpen=1",
+      name: "Men's FLX Running Shorts",
+      price: 570,
+      strikedoffprice: 889,
+      brand: "FLX",
+      rating: "(66)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5018915_ALT?wid=240&hei=240&op_sharpen=1",
+      name: "Men's FLX Outdoor Sherpa Vest",
+      price: 539,
+      strikedoffprice: 849,
+      brand: "FLX",
+      rating: "(656)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/3718607_Granite_Heather?wid=245&hei=240&op_sharpen=1",
+      name: "Men's Champion® Powerblend Fleece Graphic",
+      price: 378,
+      strikedoffprice: 599,
+      brand: "Champion",
+      rating: "(659)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/464341_Black?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Champion® Cotton Jersey Pants",
+      price: 340,
+      strikedoffprice: 599,
+      brand: "Champion",
+      rating: "(6897)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/2874625_Oxford_Gray?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Champion® Fleece Powerblend Sweatshirt",
+      price: 425,
+      strikedoffprice: 639,
+      brand: "Champion",
+      rating: "(6897)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4950703_White?wid=240&hei=240&op_sharpen=1",
+      name: "Big & Tall Champion® Powerblend Graphic Hoodie",
+      price: 310,
+      strikedoffprice: 449,
+      brand: "Champion",
+      rating: "(687)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4950706_Red?wid=240&hei=240&op_sharpen=1",
+      name: "Big & Tall Champion® Script Crew Sweatshirt",
+      price: 495,
+      strikedoffprice: 533,
+      brand: "Champion",
+      rating: "(11)",
+    },
+    // ***********
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5092175?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Calvin Klein 3-pack Crew Neck Tee",
+      price: 372,
+      strikedoffprice: 579,
+      brand: "Calvin Klein",
+      rating: "(5649)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5111044_Staggered_Logo_Black?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Calvin Klein CK One Lounge Crewneck Top",
+      price: 294,
+      strikedoffprice: 469,
+      brand: "Calvin Klein",
+      rating: "(549)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5111047_Gray_Heather?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Calvin Klein CK One Lounge Shorts",
+      price: 239,
+      strikedoffprice: 529,
+      brand: "Calvin Klein",
+      rating: "(59)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5092174_White?wid=245&hei=240&op_sharpen=1",
+      name: "Men's Calvin Klein 3-pack Tank",
+      price: 468,
+      strikedoffprice: 629,
+      brand: "Calvin Klein",
+      rating: "(536)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5092176?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Calvin Klein Classics 3-pack V-Neck Tee",
+      price: 378,
+      strikedoffprice: 589,
+      brand: "Calvin Klein",
+      rating: "(85)",
+    },
+    // *****
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4794953_Sleet?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Grand Slam Classic-Fit Baseball Collar Golf Shirt",
+      price: 239,
+      strikedoffprice: 499,
+      brand: "Grand Slam",
+      rating: "(894)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/3328790_Medium_Gray_Heather?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Grand Slam On Course Regular-Fit MotionFlow 360",
+      price: 768,
+      strikedoffprice: 925,
+      brand: "Grand Slam",
+      rating: "(884)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4913231_Caviar?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Grand Slam DriFlow Glen Plaid Regular-Fit 9-",
+      price: 635,
+      strikedoffprice: 889,
+      brand: "Grand Slam",
+      rating: "(74)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4916721_Surf_The_Web?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Grand Slam DriFlow Regular-Fit Performance",
+      price: 565,
+      strikedoffprice: 749,
+      brand: "Grand Slam",
+      rating: "(74)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/4921374_Riverside_Heather?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Grand Slam ECO COURSE Modern-Fit",
+      price: 434,
+      strikedoffprice: 689,
+      brand: "Grand Slam",
+      rating: "(74)",
+    },
+    // *******
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/2506076_Dark_Royal?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Antigua Dynasty Solid Button-Down Shirt",
+      price: 642,
+      strikedoffprice: 889,
+      brand: "Antigua",
+      rating: "(74)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/3274519_Mango?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Antigua Victory Pullover",
+      price: 657,
+      strikedoffprice: 839,
+      brand: "Antigua",
+      rating: "(74)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5269323?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Antigua Altitude Full-Zip Jacket",
+      price: 305,
+      strikedoffprice: 527,
+      brand: "Antigua",
+      rating: "(74)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5269355?wid=240&hei=240&op_sharpen=1",
+      name: "Mens Antigua Generation 1/2 Zip Pullover",
+      price: 341,
+      strikedoffprice: 589,
+      brand: "Antigua",
+      rating: "(74)",
+    },
+    {
+      image_url:
+        "https://media.kohlsimg.com/is/image/kohls/5269292?wid=240&hei=240&op_sharpen=1",
+      name: "Men's Antigua Glacier 1/4 Zip Pullover",
+      price: 229,
+      strikedoffprice: 489,
+      brand: "Antigua",
+      rating: "(74)",
+    },
+  ];
+
+  localStorage.setItem("mensData", JSON.stringify(mensData));
+</script>
