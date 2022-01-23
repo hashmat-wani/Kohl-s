@@ -11,8 +11,9 @@
   /* border: 1px solid red; */
 }
 #right-container {
+  overflow: hidden;
   width: 830px;
-  height: 1900px;
+  height: 1800px;
   /* border: 1px solid red; */
   margin-left: 20px;
 }
