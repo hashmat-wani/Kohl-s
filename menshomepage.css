@@ -1,0 +1,278 @@
+#container {
+  width: 1024px;
+  height: 1800px;
+  /* border: 1px solid black; */
+  margin: auto;
+  display: flex;
+}
+#left-container {
+  width: 168px;
+  height: 1800px;
+  /* border: 1px solid red; */
+}
+#right-container {
+  overflow: hidden;
+  width: 830px;
+  height: 1800px;
+  /* border: 1px solid red; */
+  margin-left: 20px;
+}
+.list-start,
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li > ul {
+  padding-left: 0;
+}
+li {
+  font-size: 13px;
+}
+.list-hr {
+  margin: 5px;
+}
+li > h6 {
+  margin-bottom: 0px;
+}
+
+/* Right container */
+.mens-head {
+  background-color: rgb(240, 240, 240);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header-hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#header-hero > h2 {
+  position: absolute;
+  padding-left: 20px;
+  width: 220px;
+}
+#header-hero > p {
+  position: absolute;
+  margin: 110px 0px 0px 20px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.header-hero {
+  margin-left: 150px;
+}
+.cooler-styles-head {
+  position: absolute;
+  z-index: 100;
+  padding-left: 250px;
+  margin-top: -10px;
+}
+#cooler-styles {
+  width: 820px;
+  height: 440px;
+  background: linear-gradient(to top right, rgb(66, 139, 198), white 70%);
+  position: relative;
+  margin-top: 40px;
+}
+.cooler-styles {
+  display: flex;
+  width: 800px;
+  padding: 30px 0px 0px 20px;
+  /* grid-gap: 10px; */
+  justify-content: space-between;
+  position: relative;
+}
+.cooler-styles > div {
+  width: 185px;
+  height: 390px;
+}
+.cooler-styles > div:nth-child(1) {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-visnav-01?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.cooler-styles-names {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(255, 255, 255, 70%);
+  justify-content: center;
+}
+.cooler-styles-names:hover {
+  background-color: white;
+  text-decoration: underline;
+}
+.cooler-styles-names > h6 {
+  text-align: center;
+}
+.right-images,
+.right-top-images {
+  width: 100%;
+  height: 189px;
+}
+.right-top-images {
+  margin-bottom: 10px;
+}
+.hoodie {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-visnav-02?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.button-down {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-visnav-03?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.jeans {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-visnav-04?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.graphic-tees {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-visnav-06?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.jackets {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-visnav-05?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.accesories {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-visnav-07?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+/* Poster */
+#deals-poster {
+  display: flex;
+  height: 150px;
+  background: rgb(255, 230, 0);
+  margin: 20px 0px;
+}
+.left-poster {
+  width: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-poster > h2 {
+  font-size: 3em;
+  font-weight: 700;
+}
+.left-poster > h1 {
+  font-size: 4.5em;
+  font-weight: 800;
+  margin-top: -15px;
+  padding-left: 10px;
+}
+.right-poster {
+  margin: 0px 25px;
+  width: 220px;
+  text-align: center;
+}
+.right-poster > b {
+  font-size: 12px;
+}
+.right-poster > h4 {
+  padding-top: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.right-poster > button {
+  width: 208px;
+  height: 45px;
+  color: white;
+  background: black;
+  font-weight: 700;
+  margin: 10px 0px 15px 0px;
+}
+
+/* Brands */
+.brands-title {
+  text-align: center;
+}
+#brands {
+  display: flex;
+  justify-content: space-between;
+}
+#brands > div {
+  width: 190px;
+  height: 317px;
+  /* border: 1px solid black; */
+}
+.sonoma {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-brands-sonoma?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.ck {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-brands-ck?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.th {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-brands-tommy?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+.eb {
+  background-image: url("https://media.kohlsimg.com/is/image/kohls/Mens-dp-20220106-brands-eddie?scl=1&fmt=pjpeg");
+  background-size: cover;
+  position: relative;
+}
+#brands > div > div {
+  height: 50px;
+}
+.brand-1 > h3 {
+  text-align: center;
+  margin: 0;
+  font-weight: 800;
+}
+.brand-1 > p {
+  text-align: center;
+  padding: 0px;
+  margin: 0;
+  font-size: 9px;
+  letter-spacing: 3px;
+  justify-content: center;
+  font-weight: 700;
+  /* margin-top: -5px; */
+}
+/* #brands > div > div > h6 {
+  padding-top: 15px;
+} */
+.brand-2 > h3 {
+  text-align: center;
+  margin-top: 7px;
+}
+.brand-3 > img {
+  margin: 14px 0px 0px 12px;
+  width: 160px;
+  height: 23px;
+}
+.brand-3 img:hover {
+  border-bottom: 3px solid black;
+}
+.brand-4 img:hover {
+  border-bottom: 3px solid black;
+}
+.brand-4 > span > img {
+  margin: 12px 0px 0px 12px;
+  width: 160px;
+}
+.description {
+  padding-top: 50px;
+  font-size: 14px;
+}
+.description > h6 {
+  font-weight: 700;
+}
+.description > hr {
+  margin-top: 0;
+}
+.description > p > a {
+  color: black;
+  font-weight: 800;
+}
