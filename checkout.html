@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+        #container{
+            /* border: 1px solid red; */
+        
+            margin: auto;
+            width: 30%;
+        
+        }
+        img{
+            width: 10%;
+            
+            margin-top: 5px;
+        }
+        #container>div:nth-child(1){
+            display: flex;
+            /* grid-template-columns:repeat(2,1fr) */
+        
+        }
+        input{
+          border-top: transparent;
+          border-left: transparent;
+          border-right: transparent;
+          height: 50px;
+          /* border:1px solid red; */
+          width: 400px;
+        }
+  .cardbox{
+      margin-top: 35px;
+  }
+  .expcvv{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+  }
+  .input1{
+      width: 90%;
+  }
+  #cvv{
+      margin-left: 10px;
+  }
+  /* input:hover{
+     box-sizing: content-box;
+  } */
+  .submitbox{
+      display: flex;
+      margin-top: 50px;
+  }
+  .submit1{
+      width: 260%;
+      height: 100%;
+      /* margin-top: 20%; */
+      background-color: black;
+      color: white;
+  }
+  .submitbox>div:nth-child(2){
+      margin-left: 150px;
+       margin-top: 5px;
+  }
+  button{
+      height: 30px;
+      background-color: white;
+      border: 1px solid grey;
+  }
+
+        
+    </style>
+</head>
+<body>
+    <div id="bigcon">
+    <div id="container">
+        <div>
+   <img src="https://www.kohls.com/cnc/media/42.0.0-920/images/dgsImages/paymentPanelImages/credit-card@3x.png" alt="">
+ 
+  <div style="margin-left:10px;"><h2>Credit or card</h2></div>
+</div>
+<h2>Card deatails</h2>
+        <form>
+         <div class="cardholderbox">
+            <p>Cardholder name</p>  
+            <input type="text" id="cardholder" placeholder="Cardholder name">
+         </div>
+         <div class="cardbox">
+            <p>Card number</p>  
+            <input type="number" id="card" placeholder="Card Number">
+         </div>
+         <div class="expcvv">
+              
+             <div>
+                <p>
+                    Expiration (MM/YY)</p>
+                <input 
+                id="exp"
+                       type="text" 
+                       class="input1"
+                       id="inputExpDate" 
+                       placeholder="MM / YY" 
+                       maxlength='7'></div>
+
+                       <div>
+                        <p>
+                            Security Code</p>
+            
+                           <input id="cvv" class="input1" type="password"></div>
+                   </div>
+                   <div class="submitbox">
+                       <div><input type="submit" class="submit1" value="DONE"></div>
+                       <div><button>CANCEL</button></div>
+                       
+                   </div>
+           
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", submitfun)
+    function submitfun(event){
+        event.preventDefault(); 
+       var cardname=document.querySelector("#cardholder").value
+       var card=document.querySelector("#card").value
+       var exp=document.querySelector("#exp").value
+       var cvv=document.querySelector("#cvv").value
+      if(cardname!=""&&card!=""&&exp!=""&&cvv!=""){
+      window.location.href="otp.html"
+    //    alert("sucessful")
+      }
+      else{
+          alert("complete Detail")
+      }
+    }
+</script>

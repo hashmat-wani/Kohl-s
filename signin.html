@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+            width: 70%;
+            margin-left: 15%;
+        
+            height: 500px;
+            margin-top: 80px;
+
+           
+        }
+        #div1{
+            width: 40%;
+            margin-left: 10%;
+            /* background-color: whitesmoke; */
+            
+
+        }
+        #div2{
+            width: 40%;
+            padding-left: 10%;
+            margin-left: 60px;
+            border: 2px solid grey;
+            border-bottom-color: white;
+            border-top-color: white;
+            border-right-color: white;
+
+        }
+        .sp{
+            vertical-align: top;
+            margin-left: 10%;
+        }
+        p{
+            font-size: 15px;
+        }
+        #check{
+            height: 5px;
+            width: 5px;
+        }
+        #submit{
+            height: 50px;
+            width: 80%;
+            background-color:#95c96f;
+            text-align: center;
+            font-size: 20px;
+            border: none;
+            margin-top: 20px;
+            color: white;
+        }
+        #email,#password{
+            height: 40px;
+            width: 255px;
+            font-size: 17px;
+            color: grey;
+            padding-left: 10px;
+        }
+        img{
+            width: 60px;
+            height: 50px;
+            margin-bottom: 2%;
+            margin-left: 20px;
+        }
+        #Checkboxtext{
+            margin-left: 0px;
+            font-size: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        a{
+            color: black;
+            font-size: 15px;
+        }
+        .forgotpassword{
+            position: relative;
+            vertical-align: top;
+            top: 8px;
+            
+        }
+        .cardAccount{
+            margin-left: 0;
+            margin-top: 30px;
+        }
+        .cardAcc1{
+            position: relative;
+            top:-35px;
+            font-size: 13px;
+            left: 10px;
+        }
+        .cardAcc2{
+            position: relative;
+            top:-35px;
+            font-size: 13px;
+            left: 75px;
+        }
+        label{
+            display: block;
+            margin-bottom: -15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="div1">
+            <h3>Sign In</h3>
+            <p>Sign in to your kohls.comaccount to shop, <br>
+                check out or track your order.</p>
+            <label>Email Address</label><br>
+            <input id="email" type="text">
+            <br><br>
+            <label>Password</label><br>
+            <input id="password" type="password">
+           <br>
+           <br>
+            <input type="checkbox" style="width: 30px; height: 30px;"><span class="forgotpassword">keep me signed in  <a href="#">forgot password</a> </span><br> 
+            <p id="Checkboxtext">Check this box to stay sign in on this device <br>
+                Recommended for devices that only you use.</p>
+
+            <button id="submit" >submit</button>
+            <br>
+            <img class="cardAccount" src="./images/cardaccount.JPG" alt="">
+            <span class="cardAcc1">Looking for your Kohl's Card Account?</span>
+            <br><span class="cardAcc2"><u> Sign In to your Kohl's Card Account</u> or<u> Apply for a Kohl's Card.</u></span>
+            
+        
+        </div>
+        <div id="div2">
+            <h3>Create Account</h3>
+            <p>With a Kohls.com account, enjoy exclusive, <br>
+             benefits that make shopping faster and easier!</p>
+               <img src="./images/express.JPG">    <span class="sp" >Enjoy Express Checkout</span>
+          <br>  <img src="./images/rewards.JPG">   <span class="sp" >See your Kohl's Reward</span>
+         <br>   <img src="./images/kohlscash.JPG"> <span class="sp" >print Kohl's Cash</span>   
+       <br> <img src="./images/track.JPG">         <span class="sp" >Track Order Easily</span>
+       <button id="submit" type="submit" onclick="window.location.href='../New folder/signUp.html'" >Create Account</button>
+    </div>
+    </div>
+    
+</body>
+</html>
+
+
+<script>
+
+var formArr = JSON.parse(localStorage.getItem("userdata"));
+
+
+document.querySelector("#submit").addEventListener("click",function(event){
+    {
+    event.preventDefault();
+    var email=document.querySelector("#email").value;
+    var passwrod=document.querySelector("#password").value;
+    console.log(email,passwrod,formArr)
+    flag=false;
+    for(var i=0;i<formArr.length;i++)
+    {
+        if(formArr[i].email==email&&formArr[i].passwrod==passwrod)
+        {
+            alert("login successfull")
+
+            flag=true;
+            window.location.href="banner.html"
+            break;
+
+        }
+    }
+    if(!flag)
+    {
+        alert("invalid credential")
+    }
+}
+})
+
+</script>

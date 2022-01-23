@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/signUp.css">
+    <script src="signUp.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div>header</div>
+        <div id="content">
+            <h3 style="font-family: calibri;">Create Account</h3>
+            <p style="color: rgb(0, 0, 0);">By creating an account,you agree to Kohl's
+                <a href="securty" style="color:gray;">Security & Privacy Policy</a> and <a onclick="apass()"style="color:gray;"
+                    href="www.policy.com">Legal Notices.</a>
+            <form id="medcon">
+                <div id="first" class="medcon">
+                    <div class="inputName">First Name</div>
+                    <div style=" margin-top:0px;"><input type="text" id="firstNam" class="input"></div>
+                </div>
+                <div class="medcon">
+                    <div class="inputName">Last Name</div>
+                    <div style="margin-top:0px;"><input type="text" id="lastNam" class="input input1"></div>
+                </div>
+                <div id="eamilbox" class="medcon">
+                    <div class="inputName">Email Address</div>
+                    <div style=" margin-top:0px; height:78px;"><input type="text" id="email" class="input"
+                            placeholder="name@mail.com">
+                    </div>
+                    <div class="checkbox"><input type="checkbox" class="check" >
+                        <div class="keepme">
+                            <h4>Keep me signed in</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="margin-top: 0px; font-family: calibri;">
+                            Check this box to stay signed in on this device. Recommended for devices that only you use.
+                        </p>
+                    </div>
+
+                </div>
+                <div id="Last" class="medcon">
+                    <div class="inputName psd" >Password
+                      <div> <a onclick="hidepass()" id="show">Show</a></div>
+                    </div>
+                    <div style=" margin-top:0px;"><input type="password" id="password" class="input input1"
+                            placeholder="Should not be sme as email or login"></div>
+                </div>
+                <div class="line">
+                    <hr>
+                </div>
+                <div></div>
+                <div id="img">
+                    <div> <img
+                            src="https://www.kohls.com/account/media/42.0.0-684/images/loyaltyV2/kohls-rewards-horizontal.png"
+                            alt=""></div>
+                    <div><img id="question"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjVs9qcCmr9f-bLquq8Syj0IKCKlNKpAGCCQ&usqp=CAU"
+                            alt=""></div>
+                </div>
+                <div></div>
+                <div id="threecheck">
+                    <div>
+                        <div class="roundbox"> <input id="signed" name="drone" class="roundcheck" type="radio"></div>
+                        <div class="roundBoxName"><label for="signed">I
+                                signed up In store</label></div>
+                        <div class="roundbox" style=" margin-left:5px"> <input name="drone" id="enroll"
+                                class="roundcheck" type="radio"></div>
+                        <div class="roundBoxName"><label for="signed">Enroll
+                                Today!</label></div>
+                        <div class="roundbox" style="margin-left:5px"> <input name="drone" id="no"
+                                class="roundcheck" type="radio"></div>
+                        <div class="roundBoxName"><label for="signed">No
+                                Thanks.</label></div>
+
+                    </div>
+                    <div class="line1">
+                        <hr>
+                    </div>
+                    <div class="checkbox checkbox1"><input type="checkbox" class="check" >
+                        <div class="keepme keepme1">
+                            <p><span class="span">Yes sign me up!</span>I'd like to receive Kohl's e-mail offers,
+                                updates on sales and events
+                                and more! US Residents Only. Get 15% off your next purchase. Terms apply; see details.
+                                <a style="color:black;" href="www.privcypolicy.com">Privacy Policy.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="submitbox">
+                        <div style="width:auto"><input id="submit1" type="submit" value="CREATE ACCOUNT"></div>
+                        <div id="cancel"><a style="color: black;" href="">CANCEL</a></div>
+                    </div>
+                    <!-- <input type="submit"> -->
+            </form>
+            <!-- <form id=form>
+                <div><div><div><div><input id="nam" type="text"></div></div></div></div>
+                <div><div><div><div><div><input type="submit"></div></div></div></div></div>
+            </form> -->
+
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",formSubmit)
+    var formArr=JSON.parse(localStorage.getItem("userdata")) || [];
+    function formSubmit(event){
+    event.preventDefault();
+    var firstName=document.querySelector("#firstNam").value
+    var lastName=document.querySelector("#lastNam").value
+    var name=firstName+lastName
+    var email=document.querySelector("#email").value
+    var passwrod=document.querySelector("#password").value
+     var fromobj={
+         firstName:firstName,
+         lastName:lastName,
+         email:email,
+         passwrod:passwrod
+     }
+
+     
+  if(firstName!=""&&lastName!=""&&email!=""&&passwrod!=""){
+    formArr.push(fromobj)
+     localStorage.setItem("userdata",JSON.stringify(formArr))
+     alert("SignUp Sucessful")
+
+  }
+     
+   
+    //  please connect login page here
+    //  window.location.herf=""
+    }
+   var count=0;
+ function hidepass(){
+     count++
+     console.log(count)
+     var val=   document.querySelector("#password")
+   
+     if(count==1){
+        val.type = "text";
+         
+         
+      return  document.querySelector("#show").textContent="Hide"
+      
+        
+     }
+     else {
+         val.type="password"
+         count=0
+     return   document.querySelector("#show").textContent="Show"
+        
+    
+     }
+
+  
+ 
+ }
+
+ 
+
+</script>

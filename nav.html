@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <a
+    class="navbar-brand"
+    title="Kohl's | Shop Clothing, Shoes, Home, Kitchen, Bedding, Toys & More"
+    href="#"
+  >
+    <svg
+      preserveAspectRatio="none"
+      viewBox="0 0 122 20"
+      height="35"
+      width="230"
+    >
+      <path
+        d="M0 .441h8.193v5.483h.063L14.527.441h9.202l-7.563 6.712 8.729 9.234H14.527l-6.27-6.524h-.064v6.524H0V.44zM36.775 0c9.34448 0 11.849 1.922 11.849 8.445 0 6.523-2.521 8.446-11.849 8.446-9.328.031-11.88-1.891-11.88-8.446C24.895 1.922 27.447 0 36.775 0zm0 13.613c3.656 0 3.404-4.002 3.404-5.325 0-1.324.031-4.98-3.404-4.98s-3.403 3.656-3.403 4.98c-.032 1.323-.252 5.325 3.403 5.325zM66.303 10.4h-6.05v6.082h-8.415V.536h8.414v5.483h6.05V.536h8.414V16.48h-8.413V10.4zM78.718.536h8.635v12.132s6.87.032 7.784.032c.913 0 1.45-.82 1.45-.82v4.57H78.717V.536zm37.973 5.294c-1.796-1.418-3.309-1.86-4.947-1.89-1.607-.032-3.089.535-3.089 1.48 0 .756 1.103 1.072 4.948 1.86 3.151.661 5.263 2.237 5.263 5.167 0 3.31-5.641 5.2-10.652 5.2-3.53 0-6.24-.63-8.666-1.702v-4.474c1.513 1.544 4.853 2.363 7.437 2.363 1.418 0 2.143-.22 2.143-1.323 0-.694-.882-1.324-3.592-1.797-5.105-.914-6.839-2.363-6.839-4.821 0-3.53 4.475-5.61 9.958-5.61 2.963 0 5.673.095 8.068 1.198V5.83h-.032zM91.796 7.059l.599-1.009c-1.765-.85-2.3-3.056-1.387-4.317.977-1.355 3.656-1.922 5.137.158 1.229 1.764.063 3.277-.473 3.718-.598.41-3.876 1.45-3.876 1.45zm27.637-5.01c0 .598-.473 1.04-1.04 1.04-.599 0-1.04-.473-1.04-1.04 0-.6.473-1.04 1.04-1.04.567 0 1.04.44 1.04 1.04zm-1.954 0c0 .504.378.913.882.913.505 0 .883-.41.883-.914s-.378-.914-.883-.914c-.504.032-.882.41-.882.914zm.662.63h-.158v-1.23h.473c.283 0 .41.127.41.347 0 .22-.158.315-.316.347l.379.536h-.19l-.346-.536h-.252v.536zm.189-.694c.189 0 .378 0 .378-.22 0-.158-.126-.22-.284-.22h-.283v.409h.189v.031z"
+        fill="#444"
+      />
+    </svg>
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target=".navbar-collapse"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <div>
+            <img src="images/user.png" alt="" />
+          </div>
+          <p>Account</p>
+        </a>
+        <ul class="dropdown-menu" id="ct" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item" id="signin" href="./signin.html"
+              ><button type="button" class="btn btn-dark">SIGN IN</button></a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="./signUp.html"><p>Create Account</p></a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./cart.html">
+          <div>
+            <img src="images/shopping-cart.png" alt="" />
+            <div class="cart_value"><h6 style="color: red;" id="cartItemCount">4</h6></div>
+          </div>
+          <p id="totalCartPrice">₹0.00</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <div>
+            <img src="images/checkout.png" alt="" />
+          </div>
+          <button style="border: none;" onclick="document.location.href='checkout.html'">CheckOut</button>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+ var cartItems = JSON.parse(localStorage.getItem('cartItems'));
+ var cartCount = document.querySelector('#cartItemCount');
+ cartCount.innerHTML=cartItems.length;
+ console.log(cartItems)
+ sum=0;
+ for(let i=0;i<cartItems.length;i++){
+   sum+=(+cartItems[i].price);
+ }
+ document.querySelector('#totalCartPrice').textContent=`Rs ${sum}`;
+ console.log(sum)
+window.reload();
+</script>

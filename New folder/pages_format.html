@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link
+      rel="icon"
+      href="https://png.pngitem.com/pimgs/s/133-1334238_kohls-gift-card-png-transparent-png.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" media="screen" href="nav-footer_style.css" />
+    <!-- Css link -->
+    <link rel="stylesheet" href="mensproduct.css" />
+    <!-- Bootstrap plugin -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d3db143f9a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <div class="banner"></div>
+    <nav class="navbar sticky-top navbar-expand-md navbar-light"></nav>
+    <div id="container">
+      <div id="left-container">
+        <ul>
+          <li>
+            <a class="department" onclick="departmentDisplay()" href="#">
+              Department
+              <span class="fas fa-caret-down first"></span
+            ></a>
+            <ul class="departments">
+              <li>
+                <label for="accesories">
+                  <input type="checkbox" id="accesories" value="accesories" />
+                  Accesories
+                </label>
+              </li>
+              <li>
+                <label for="clothing">
+                  <input type="checkbox" id="clothing" value="clothing" />
+                  Clothing</label
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="gender" href="#">
+              Gender
+              <span class="fas fa-caret-down"></span>
+            </a>
+            <ul class="genders">
+              <li>
+                <label for="mens">
+                  <input type="checkbox" class="radio" id="mens" value="mens" />
+                  Mens</label
+                >
+              </li>
+              <li>
+                <label for="womens">
+                  <input
+                    type="checkbox"
+                    class="radio"
+                    id="womens"
+                    value="womens"
+                  />
+                  Womens</label
+                >
+              </li>
+              <li>
+                <label for="kids">
+                  <input type="checkbox" class="radio" id="kids" value="kids" />
+                  Kids</label
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="brand" href="#">
+              Brand
+              <span class="fas fa-caret-down"></span>
+            </a>
+            <ul class="brands">
+              <li>
+                <label for="adidas">
+                  <input
+                    type="checkbox"
+                    id="adidas"
+                    value="Adidas"
+                    name="Adidas"
+                    onchange="brandFilter(value)"
+                  />
+                  Adidas</label
+                >
+              </li>
+              <li>
+                <label for="reebok">
+                  <input
+                    type="checkbox"
+                    id="reebok"
+                    value="Reebok"
+                    name="Reebok"
+                    onchange="brandFilter(value)"
+                  />
+                  Reebok</label
+                >
+              </li>
+              <li>
+                <label for="grandslam">
+                  <input
+                    type="checkbox"
+                    id="grandslam"
+                    value="Grand Slam"
+                    name="Grand Slam"
+                    onchange="brandFilter(value)"
+                  />
+                  Grand Slam</label
+                >
+              </li>
+              <li>
+                <label for="flx">
+                  <input
+                    type="checkbox"
+                    id="flx"
+                    value="FLX"
+                    name="FLX"
+                    onchange="brandFilter(value)"
+                  />
+                  FLX</label
+                >
+              </li>
+              <li>
+                <label for="calvinklein">
+                  <input
+                    type="checkbox"
+                    id="calvinklein"
+                    value="Calvin Klein"
+                    name="Calvin Klein"
+                    onchange="brandFilter(value)"
+                  />
+                  Calvin Klein</label
+                >
+              </li>
+              <li>
+                <label for="champion">
+                  <input
+                    type="checkbox"
+                    id="champion"
+                    value="Champion"
+                    name="Champion"
+                    onchange="brandFilter(value)"
+                  />
+                  Champion</label
+                >
+              </li>
+              <li>
+                <label for="antigua">
+                  <input
+                    type="checkbox"
+                    id="antigua"
+                    value="Antigua"
+                    name="Antigua"
+                    onchange="brandFilter(value)"
+                  />
+                  Antigua</label
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              Size Range
+              <span class="fas fa-caret-down"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Size
+              <span class="fas fa-caret-down"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Material
+              <span class="fas fa-caret-down"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Color
+              <span class="fas fa-caret-down"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Price
+              <span class="fas fa-caret-down"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Customer Rating
+              <span class="fas fa-caret-down"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Age Range
+              <span class="fas fa-caret-down"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="right-container">
+        <span><b>All Products</b></span>
+        <div class="sorting">
+          <p>Sort By</p>
+          <select id="sort-select" onchange="handleSort()">
+            <option value="">sort by</option>
+            <option value="Low-High">Price Low-High</option>
+            <option value="High-Low">Price High-Low</option>
+          </select>
+          <div onclick="showFavorites()" class="favorites">My Favorites</div>
+        </div>
+        <hr />
+        <div class="products"></div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script>
+  var mensData = JSON.parse(localStorage.getItem("mensData"));
+  var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
+  var favArr = JSON.parse(localStorage.getItem("favItems")) || [];
+  var navBrand = JSON.parse(localStorage.getItem("navbrand"));
+
+  displayData(mensData);
+
+  function handleSort() {
+    var selected = document.querySelector("#sort-select").value;
+    if (selected == "High-Low") {
+      mensData.sort(function (a, b) {
+        return Number(b.price) - Number(a.price);
+      });
+    }
+    if (selected == "Low-High") {
+      mensData.sort(function (a, b) {
+        return Number(a.price) - Number(b.price);
+      });
+    }
+    displayData(mensData);
+  }
+
+  function brandFilter(selbrand) {
+    var checkboxes = document.querySelectorAll(
+      ".brands input[type='checkbox']"
+    );
+    var arr = [];
+    checkboxes.forEach(function (box) {
+      if (box.checked) {
+        filteredbrandlist = mensData.filter(function (elem) {
+          return elem.brand == box.name;
+        });
+        arr = arr.concat(filteredbrandlist);
+      }
+      arr;
+    });
+    console.log(arr);
+    if (arr.length == 0) {
+      displayData(mensData);
+    } else {
+      displayData(arr);
+    }
+  }
+  function showFavorites() {
+    displayData(favArr);
+  }
+
+  function displayData(mensData) {
+    document.querySelector(".products").innerHTML = "";
+    mensData.map(function (data) {
+      var div = document.createElement("div");
+
+      // image creation
+      var image = document.createElement("img");
+      image.setAttribute("src", data.image_url);
+
+      // name creation
+      var div3 = document.createElement("div");
+      var name = document.createElement("p");
+      name.textContent = data.name;
+      div3.append(name);
+      div3.setAttribute("class", "names");
+
+      // price creation
+      var div2 = document.createElement("div");
+      div2.setAttribute("id", "flex");
+
+      var p1 = document.createElement("p");
+      p1.textContent = data.price + "₹";
+
+      var fav = document.createElement("span");
+      fav.textContent = "♥";
+      fav.addEventListener("click", function () {
+        addToFav(data);
+      });
+
+      div2.append(p1, fav);
+
+      // add to cart button creation
+      var btn = document.createElement("button");
+      btn.textContent = "Add To Cart";
+      btn.addEventListener("click", function () {
+        addToCart(data);
+      });
+
+      //append
+      div.append(image, div3, div2, btn);
+      document.querySelector(".products").append(div);
+    });
+  }
+  // var totalCartBill = JSON.parse(localStorage.getItem("cartbill"));
+  var count = JSON.parse(localStorage.getItem("cartitemsvalue"));
+  function addToCart(data) {
+    cartArr.push(data);
+    count++;
+    localStorage.setItem("cartitemsvalue", count);
+    localStorage.setItem("cartItems", JSON.stringify(cartArr));
+    document.querySelector(".cart_value h6").textContent = count;
+    // localStorage.setItem("cartbill", totalCartBill + data.price);
+    // document.querySelector(".nav item .nav-link p").innerHTML = totalCartBill;
+    alert("Added To Cart Successfully");
+  }
+
+  function addToFav(data) {
+    favArr.push(data);
+    localStorage.setItem("favItems", JSON.stringify(favArr));
+    alert("Added To Favourites Successfully");
+  }
+  // Checkbox toggle
+  $(".department").click(function () {
+    $(".departments").toggleClass("show");
+  });
+
+  $(".gender").click(function () {
+    $(".genders").toggleClass("show");
+  });
+
+  $(".brand").click(function () {
+    $(".brands").toggleClass("show");
+  });
+  $(function () {
+    $(".banner").load("banner.html");
+    $(".navbar").load("nav.html");
+    $("#footer").load("footer.html");
+  });
+
+  if (navBrand !== {} && navBrand !== null) {
+    if (navBrand.brandname == "Adidas") {
+      document.getElementById("adidas").checked = true;
+      window.localStorage.removeItem("navbrand");
+    } else if (navBrand.brandname == "Reebok") {
+      document.getElementById("reebok").checked = true;
+      window.localStorage.removeItem("navbrand");
+    } else if (navBrand.brandname == "Grand Slam") {
+      document.getElementById("grandslam").checked = true;
+      window.localStorage.removeItem("navbrand");
+    } else if (navBrand.brandname == "FLX") {
+      document.getElementById("flx").checked = true;
+      window.localStorage.removeItem("navbrand");
+    } else if (navBrand.brandname == "Calvin Klein") {
+      document.getElementById("calvinklein").checked = true;
+      window.localStorage.removeItem("navbrand");
+    } else if (navBrand.brandname == "Champion") {
+      document.getElementById("champion").checked = true;
+      window.localStorage.removeItem("navbrand");
+    } else if (navBrand.brandname == "Antigua") {
+      document.getElementById("antigua").checked = true;
+      window.localStorage.removeItem("navbrand");
+    }
+    brandFilter();
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
