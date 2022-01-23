@@ -42,18 +42,19 @@
     <div id="container">
       <div class="cart-list"></div>
       <div class="checkout-list">
+        <h4 class="checkout-details">Checkout Details:</h4>
           <div>
               <div class="first">
                   <div>
-                    <span>Items - (<span class="itemcount"></span>)</span>
+                    <span>Items - (<span class="itemcount">0</span>)</span>
                   </div>
                
-                <h6 class="totalprice"></h6>    
+                <h6 class="totalprice">00.00</h6>    
               </div>
         </div>
           <div>
               <h6>Kohl's Cash & offers</h6>
-              <h6><strong class="discount"></strong></h6>
+              <h6><strong class="discount">00.00</strong></h6>
           </div>
           <div>
               <h6>Shipping</h6>
@@ -62,7 +63,7 @@
           <hr>
           <div>
               <h4>Total</h4>
-              <h4 class="grandtotal"></h4class>
+              <h4 class="grandtotal">00.00</h4class>
           </div>
         <h4 class="saving"></h4>
           
@@ -79,10 +80,18 @@
       $(".navbar").load("nav.html");
       $("#footer").load("footer.html");
     });
-    var cartData = JSON.parse(localStorage.getItem("ls_cartData"));
+    var cartData = JSON.parse(localStorage.getItem("ls_cartData"))||[];
     display(cartData);
     function display(cartData) {
-      cartData.map(function (el) {
+      if(cartData.length==0){
+        div = document.createElement("div");
+        div.setAttribute("class","empty-cart");
+        div.innerHTML="<p>There’s nothing in your shopping<br>cart, but the possibilities are endless!</p>"
+        document.querySelector(".cart-list").append(div);
+       
+      }
+      else{
+        cartData.map(function (el) {
         div = document.createElement("div");
         imgdiv = document.createElement("div");
         imgdiv.setAttribute("class", imgdiv);
@@ -118,10 +127,12 @@
       var discount=cartData.reduce(function(ac,el){
             return ac+(el.strikedoffprice-el.price);
       },0);
-      document.querySelector(".discount").textContent=`₹ ${discount}.00`;
+      document.querySelector(".discount").textContent=`- ₹ ${discount}.00`;
       document.querySelector(".grandtotal").textContent=`₹ ${totalprice-discount}.00`; 
       document.querySelector(".checkout").textContent=`${totalprice-discount}.00`;
       document.querySelector(".saving").textContent=`You’re saving ₹${discount}.00!`;
     }
+    }
+    
   </script>
 </html>
