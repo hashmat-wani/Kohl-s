@@ -1,0 +1,153 @@
+body {
+  font-family: gotham\8r, GothamBlack, Helvetica, Arial, sans-serif;
+}
+#contianer {
+  width: 120%;
+}
+#content {
+  width: 45.2%;
+  margin: 30px auto 60px;
+}
+#medcon {
+  /* border:1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 20px;
+}
+.inputName {
+  margin-bottom: 10px;
+}
+.input {
+  width: 97.8%;
+  height: 35px;
+  /* border: 2px solid rgb(39, 27, 27);
+    outline:none; */
+  border: 1px solid grey;
+}
+.input1 {
+  width: 98%;
+}
+.check {
+  /* border: 1px solid rgb(137, 196, 26); */
+  width: 30px;
+  height: 30px;
+  margin-top: 17px;
+}
+.checkbox {
+  margin-top: 0px;
+  display: flex;
+}
+.keepme {
+  margin-left: 10px;
+}
+#show {
+  margin-left: 99px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+hr {
+  width: 250%;
+  border: 0.1px solid rgb(216, 208, 208);
+  margin-top: 0px;
+}
+#question {
+  width: 10%;
+}
+#img {
+  /* border:1px solid red; */
+  width: 210%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* #img>div:nth-child(1){
+    /* border:1px solid red; */
+
+/* } */
+/* #img>div:nth-child(2){ */
+/* border:1px solid red; */
+
+/* } */
+#line {
+  margin-top: -5px;
+}
+#emailbox {
+  height: 50%;
+}
+/* #threecheck{
+    /* border: 1px solid rgb(14, 5, 5); */
+/* }  */
+.roundcheck {
+  height: 30px;
+  width: 100%;
+  margin-left: 0px;
+}
+#threecheck > div {
+  display: flex;
+}
+.roundbox {
+  width: 50px;
+}
+.roundBoxName {
+  margin-top: 10px;
+}
+#threecheck {
+  width: 210%;
+}
+.line1 {
+  margin-top: 20px;
+  width: 120%;
+}
+.span {
+  font-weight: bold;
+}
+/* .line1>hr{
+    width: 250%;
+    border: 0.1px solid rgb(216, 208, 208);
+    margin-top: 0px; */
+/* } */
+#submit1 {
+  height: 45px;
+  width: 120%;
+  background-color: rgb(149, 201, 111);
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+.keepme1 {
+  /* border: 1px solid red; */
+  width: 250%;
+}
+#submitbox {
+  display: flex;
+  margin-top: 20px;
+}
+#cancel {
+  margin-left: 70px;
+  margin-top: 10px;
+}
+/* .input:hover{
+  border: 1px solid blue;
+*/
+.input:focus {
+  border: 4px solid rgb(17, 243, 243);
+  box-shadow: rgba(17, 243, 243, 0.23) 0px 3px 8px;
+}
+.check {
+  background-color: rgb(149, 201, 111);
+}
+.inputName {
+  font-family: calibri;
+  font-weight: bold;
+}
+h4 {
+  font-family: calibri;
+}
+p {
+  font-family: calibri;
+}
+.psd {
+  display: flex;
+}
