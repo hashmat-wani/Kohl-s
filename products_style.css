@@ -145,7 +145,7 @@ select {
 .products-list img {
   width: 100%;
   margin-bottom: 10px;
-  height: 350px;
+  height: 320px;
 }
 .products-list > div {
   min-width: 250px;
