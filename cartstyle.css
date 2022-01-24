@@ -98,7 +98,7 @@
 }
 .price_div {
   align-items: flex-end;
-  margin: 0 10px;
+  margin: 0;
   display: flex;
   gap: 10px;
   justify-content: flex-start;
@@ -125,12 +125,10 @@
 .rmvbtn {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  margin: 20px 0;
   border: none;
   padding: 5px 0;
-  border-radius: 30px;
-  width: 25%;
-  background: #202020;
+  border-radius: 7px;
+  width: 100px;
   background: tomato;
   color: wheat;
 }
@@ -138,4 +136,37 @@
   background: orangered;
   color: white;
   transform: scale(0.9, 0.9);
+}
+.carteditdiv {
+  display: flex;
+  justify-content: flex-start;
+  gap:40px;
+  margin-top: 15px;
+  align-items: flex-end;
+}
+.quantitydiv {
+  display: flex;
+  justify-content: center;
+  height: 28px;
+}
+.quantitydiv p{
+  padding:0px 10px;
+  display: block;
+  font-weight: bold;
+}
+
+.quantitydiv>div{
+  border:1px solid tomato;
+  padding:0px 10px 0;
+  text-align: center;
+  font-weight: bold;
+  color:tomato;
+}
+.quantitydiv>div:nth-of-type(1){
+  background:tomato;
+  color: white;
+}
+.quantitydiv>div:nth-of-type(3){
+  background:tomato;
+  color:white;
 }

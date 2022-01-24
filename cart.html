@@ -115,6 +115,8 @@
         )}% OFF)`;
         small2.setAttribute("class", "red");
         pricediv.append(p, small1, small2);
+        carteditdiv=document.createElement('div');
+        carteditdiv.setAttribute('class','carteditdiv');
         rmvbtn = document.createElement("button");
           rmvbtn.setAttribute("class", "rmvbtn");
           rmvbtn.textContent = "Remove";
@@ -124,7 +126,19 @@
             window.location.href="cart.html"
             // display(cartData);
         });
-        detaildiv.append(h6, pricediv,rmvbtn);
+        quantitydiv=document.createElement('div');
+        quantitydiv.setAttribute('class','quantitydiv');
+        p=document.createElement('p');
+        p.textContent="Qty";
+        div1=document.createElement('div');
+        div1.textContent="-";
+        div2=document.createElement('div');
+        div2.textContent="0";
+        div3=document.createElement('div');
+        div3.textContent="+";
+        quantitydiv.append(p,div1,div2,div3);
+        carteditdiv.append(rmvbtn,quantitydiv);
+        detaildiv.append(h6, pricediv,carteditdiv);
         div.append(imgdiv, detaildiv);
         document.querySelector(".cart-list").append(div);
         document.querySelector(".itemcount").textContent=cartData.length;
