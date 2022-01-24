@@ -82,16 +82,24 @@
     });
     var cartData = JSON.parse(localStorage.getItem("ls_cartData"))||[];
     display(cartData);
+    var total_items=0;
     function display(cartData) {
       if(cartData.length==0){
         div = document.createElement("div");
         div.setAttribute("class","empty-cart");
         div.innerHTML="<p>There’s nothing in your shopping<br>cart, but the possibilities are endless!</p>"
+        btn=document.createElement('button');
+        btn.textContent="Start Shopping";
+        btn.addEventListener('click',function(){
+          window.location.href="products.html"
+        });
+        div.append(btn);
         document.querySelector(".cart-list").append(div);
        
       }
       else{
         cartData.map(function (el,index) {
+       
         div = document.createElement("div");
         imgdiv = document.createElement("div");
         imgdiv.setAttribute("class", imgdiv);
@@ -132,23 +140,47 @@
         p.textContent="Qty";
         div1=document.createElement('div');
         div1.textContent="-";
+        div1.addEventListener('click',function(){
+          if(el.qty>1){
+            el.qty--;
+         localStorage.setItem("ls_cartData",JSON.stringify(cartData));
+         window.location.href="cart.html"
+          }
+        
+        //  display(cartData);
+        });
         div2=document.createElement('div');
-        div2.textContent="0";
+        // div2.setAttribute('class','qtyvalue');
+        div2.textContent=el.qty;
         div3=document.createElement('div');
         div3.textContent="+";
+        div3.addEventListener('click',function(){
+          el.qty++;
+        localStorage.setItem("ls_cartData",JSON.stringify(cartData));
+         window.location.href="cart.html"
+        //  display(cartData);
+        });
         quantitydiv.append(p,div1,div2,div3);
         carteditdiv.append(rmvbtn,quantitydiv);
         detaildiv.append(h6, pricediv,carteditdiv);
         div.append(imgdiv, detaildiv);
         document.querySelector(".cart-list").append(div);
-        document.querySelector(".itemcount").textContent=cartData.length;
-       });
+        });
+      //  function increaseQty(el){
+         
+       var total_items=cartData.reduce(function(ac,el){
+            return ac+ Number(el.qty);  
+       },0);
+       document.querySelector(".itemcount").textContent=total_items;
+       
+
+      
       var totalprice=cartData.reduce(function(ac,el){
-            return ac+el.strikedoffprice;
+            return ac+ Number(el.strikedoffprice * el.qty);
       },0);
       document.querySelector(".totalprice").textContent=`₹ ${totalprice}.00`;
       var discount=cartData.reduce(function(ac,el){
-            return ac+(el.strikedoffprice-el.price);
+            return ac+ Number((el.strikedoffprice * el.qty)-(el.price * el.qty));
       },0);
       document.querySelector(".discount").textContent=`- ₹ ${discount}.00`;
       document.querySelector(".grandtotal").textContent=`₹ ${totalprice-discount}.00`; 

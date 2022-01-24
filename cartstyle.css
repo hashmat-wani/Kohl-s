@@ -11,7 +11,7 @@
   border: none;
   background: #14718a;
   color: white;
-  padding: 12px 13px;
+  padding: 12px 20px;
   border-radius: 5px;
 }
 .tab > div:nth-child(2) {
@@ -38,15 +38,28 @@
   display: flex;
   width: 100%;
   margin: 10px 0;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .empty-cart {
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 50px;
+  height: 320px;
+}
+.empty-cart button {
+  width: 30%;
+  padding: 20px;
+  background: #14718a;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+}
+.empty-cart button:hover {
+  transform: scale(1.1, 1.1);
 }
 .imgdiv {
   width: 40%;
@@ -63,9 +76,7 @@
   margin: 30px;
   width: 40%;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .checkout-details {
   color: red;
@@ -140,7 +151,7 @@
 .carteditdiv {
   display: flex;
   justify-content: flex-start;
-  gap:40px;
+  gap: 40px;
   margin-top: 15px;
   align-items: flex-end;
 }
@@ -149,24 +160,30 @@
   justify-content: center;
   height: 28px;
 }
-.quantitydiv p{
-  padding:0px 10px;
+.quantitydiv p {
+  padding: 0px 10px;
   display: block;
   font-weight: bold;
 }
 
-.quantitydiv>div{
-  border:1px solid tomato;
-  padding:0px 10px 0;
+.quantitydiv > div {
+  padding: 0px 10px 0;
   text-align: center;
   font-weight: bold;
-  color:tomato;
+  color: tomato;
+  border: 1px solid tomato;
 }
-.quantitydiv>div:nth-of-type(1){
-  background:tomato;
+.quantitydiv > div:nth-of-type(1) {
+  background: tomato;
   color: white;
+  cursor: pointer;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
-.quantitydiv>div:nth-of-type(3){
-  background:tomato;
-  color:white;
+.quantitydiv > div:nth-of-type(3) {
+  background: tomato;
+  color: white;
+  cursor: pointer;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
