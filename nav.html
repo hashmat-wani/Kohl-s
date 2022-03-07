@@ -74,6 +74,8 @@
   </div>
 </div>
 <script>
+  // import nav_functionality from "./nav.js";
+  // nav_functionality();
   var cartData = JSON.parse(localStorage.getItem("ls_cartData")) || [];
   var total_items = cartData.reduce(function (ac, el) {
     return ac + Number(el.qty);

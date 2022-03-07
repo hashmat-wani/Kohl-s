@@ -28,10 +28,12 @@
 }
 #container {
   display: flex;
+  padding: 20px;
+  gap: 20px;
+  min-width: 330px;
 }
 .cart-list {
   width: 60%;
-  padding: 20px;
 }
 .cart-list > div {
   padding: 10px;
@@ -50,7 +52,7 @@
   height: 320px;
 }
 .empty-cart button {
-  width: 30%;
+  width: 200px;
   padding: 20px;
   background: #14718a;
   color: white;
@@ -72,9 +74,9 @@
   padding: 20px;
 }
 .checkout-list {
+  margin: 10px 0;
   text-align: center;
-  margin: 30px;
-  width: 40%;
+  width: 100%;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

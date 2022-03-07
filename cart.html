@@ -74,21 +74,23 @@
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script>
+  <script type="module">
     $(function () {
       $(".banner").load("banner.html");
       $(".navbar").load("nav.html");
       $("#footer").load("footer.html");
     });
+    import nav_functionality from "./nav.js";
     var cartData = JSON.parse(localStorage.getItem("ls_cartData"))||[];
     display(cartData);
     var total_items=0;
     function display(cartData) {
+      document.querySelector(".cart-list").innerHTML=null;
       if(cartData.length==0){
-        div = document.createElement("div");
+        let div = document.createElement("div");
         div.setAttribute("class","empty-cart");
         div.innerHTML="<p>There’s nothing in your shopping<br>cart, but the possibilities are endless!</p>"
-        btn=document.createElement('button');
+        let btn=document.createElement('button');
         btn.textContent="Start Shopping";
         btn.addEventListener('click',function(){
           window.location.href="products.html"
@@ -100,65 +102,66 @@
       else{
         cartData.map(function (el,index) {
        
-        div = document.createElement("div");
-        imgdiv = document.createElement("div");
+        let div = document.createElement("div");
+        let imgdiv = document.createElement("div");
         imgdiv.setAttribute("class", imgdiv);
-        image = document.createElement("img");
+        let image = document.createElement("img");
         image.setAttribute("src", el.image_url);
         imgdiv.append(image);
-        detaildiv = document.createElement("div");
+        let detaildiv = document.createElement("div");
         detaildiv.setAttribute("class", "detaildiv");
-        h6 = document.createElement("h6");
+        let h6 = document.createElement("h6");
         h6.textContent = el.name;
-        pricediv = document.createElement("div");
+        let pricediv = document.createElement("div");
         pricediv.setAttribute("class", "price_div");
-        p = document.createElement("p");
+        let p = document.createElement("p");
         p.textContent = `₹ ${el.price}`;
-        small1 = document.createElement("small");
+        let small1 = document.createElement("small");
         small1.textContent = `₹ ${el.strikedoffprice}`;
         small1.setAttribute("class", "strikeoff");
-        small2 = document.createElement("small");
+        let small2 = document.createElement("small");
         small2.textContent = `(${Math.floor(
           100 - (el.price / el.strikedoffprice) * 100
         )}% OFF)`;
         small2.setAttribute("class", "red");
         pricediv.append(p, small1, small2);
-        carteditdiv=document.createElement('div');
+        let carteditdiv=document.createElement('div');
         carteditdiv.setAttribute('class','carteditdiv');
-        rmvbtn = document.createElement("button");
+        let rmvbtn = document.createElement("button");
           rmvbtn.setAttribute("class", "rmvbtn");
           rmvbtn.textContent = "Remove";
           rmvbtn.addEventListener('click',function(){
             cartData.splice(index,1);
             localStorage.setItem('ls_cartData',JSON.stringify(cartData));
-            window.location.href="cart.html"
-            // display(cartData);
+            display(cartData);
+            nav_functionality();
         });
-        quantitydiv=document.createElement('div');
+        let quantitydiv=document.createElement('div');
         quantitydiv.setAttribute('class','quantitydiv');
         p=document.createElement('p');
         p.textContent="Qty";
-        div1=document.createElement('div');
+        let div1=document.createElement('div');
         div1.textContent="-";
         div1.addEventListener('click',function(){
           if(el.qty>1){
             el.qty--;
          localStorage.setItem("ls_cartData",JSON.stringify(cartData));
-         window.location.href="cart.html"
+        //  window.location.href="cart.html"
+        display(cartData);
+        nav_functionality();
           }
         
-        //  display(cartData);
+        //  
         });
-        div2=document.createElement('div');
-        // div2.setAttribute('class','qtyvalue');
+        let div2=document.createElement('div');
         div2.textContent=el.qty;
-        div3=document.createElement('div');
+        let div3=document.createElement('div');
         div3.textContent="+";
         div3.addEventListener('click',function(){
           el.qty++;
         localStorage.setItem("ls_cartData",JSON.stringify(cartData));
-         window.location.href="cart.html"
-        //  display(cartData);
+         display(cartData);
+         nav_functionality();
         });
         quantitydiv.append(p,div1,div2,div3);
         carteditdiv.append(rmvbtn,quantitydiv);
@@ -166,7 +169,6 @@
         div.append(imgdiv, detaildiv);
         document.querySelector(".cart-list").append(div);
         });
-      //  function increaseQty(el){
          
        var total_items=cartData.reduce(function(ac,el){
             return ac+ Number(el.qty);  
