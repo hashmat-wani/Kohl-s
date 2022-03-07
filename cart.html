@@ -34,7 +34,9 @@
         <h6><br />Offers for your cart</h6>
       </div>
       <div>
-        <button onclick="window.location.href='checkout.html'">CHECKOUT ₹<span class="checkout">00.00</span></button>
+        <button onclick="window.location.href='checkout.html'">
+          CHECKOUT ₹<span class="checkout">00.00</span>
+        </button>
       </div>
     </div>
     <div class="line"></div>
@@ -43,30 +45,29 @@
       <div class="cart-list"></div>
       <div class="checkout-list">
         <h4 class="checkout-details">Checkout Details:</h4>
-          <div>
-              <div class="first">
-                  <div>
-                    <span>Items - (<span class="itemcount">0</span>)</span>
-                  </div>
-               
-                <h6 class="totalprice">00.00</h6>    
-              </div>
+        <div>
+          <div class="first">
+            <div>
+              <span>Items - (<span class="itemcount">0</span>)</span>
+            </div>
+
+            <h6 class="totalprice">00.00</h6>
+          </div>
         </div>
-          <div>
-              <h6>Kohl's Cash & offers</h6>
-              <h6><strong class="discount">00.00</strong></h6>
-          </div>
-          <div>
-              <h6>Shipping</h6>
-              <h6><strong>Free</strong></h6>
-          </div>
-          <hr>
-          <div>
-              <h4>Total</h4>
-              <h4 class="grandtotal">00.00</h4class>
-          </div>
+        <div>
+          <h6>Kohl's Cash & offers</h6>
+          <h6><strong class="discount">00.00</strong></h6>
+        </div>
+        <div>
+          <h6>Shipping</h6>
+          <h6><strong>Free</strong></h6>
+        </div>
+        <hr />
+        <div>
+          <h4>Total</h4>
+          <h4 class="grandtotal">00.00</h4>
+        </div>
         <h4 class="saving"></h4>
-          
       </div>
     </div>
 
@@ -81,115 +82,112 @@
       $("#footer").load("footer.html");
     });
     import nav_functionality from "./nav.js";
-    var cartData = JSON.parse(localStorage.getItem("ls_cartData"))||[];
+    var cartData = JSON.parse(localStorage.getItem("ls_cartData")) || [];
     display(cartData);
-    var total_items=0;
+    var total_items = 0;
     function display(cartData) {
-      document.querySelector(".cart-list").innerHTML=null;
-      if(cartData.length==0){
+      document.querySelector(".cart-list").innerHTML = null;
+      if (cartData.length == 0) {
         let div = document.createElement("div");
-        div.setAttribute("class","empty-cart");
-        div.innerHTML="<p>There’s nothing in your shopping<br>cart, but the possibilities are endless!</p>"
-        let btn=document.createElement('button');
-        btn.textContent="Start Shopping";
-        btn.addEventListener('click',function(){
-          window.location.href="products.html"
+        div.setAttribute("class", "empty-cart");
+        div.innerHTML =
+          "<p>There’s nothing in your shopping<br>cart, but the possibilities are endless!</p>";
+        let btn = document.createElement("button");
+        btn.textContent = "Start Shopping";
+        btn.addEventListener("click", function () {
+          window.location.href = "products.html";
         });
         div.append(btn);
         document.querySelector(".cart-list").append(div);
-       
-      }
-      else{
-        cartData.map(function (el,index) {
-       
-        let div = document.createElement("div");
-        let imgdiv = document.createElement("div");
-        imgdiv.setAttribute("class", imgdiv);
-        let image = document.createElement("img");
-        image.setAttribute("src", el.image_url);
-        imgdiv.append(image);
-        let detaildiv = document.createElement("div");
-        detaildiv.setAttribute("class", "detaildiv");
-        let h6 = document.createElement("h6");
-        h6.textContent = el.name;
-        let pricediv = document.createElement("div");
-        pricediv.setAttribute("class", "price_div");
-        let p = document.createElement("p");
-        p.textContent = `₹ ${el.price}`;
-        let small1 = document.createElement("small");
-        small1.textContent = `₹ ${el.strikedoffprice}`;
-        small1.setAttribute("class", "strikeoff");
-        let small2 = document.createElement("small");
-        small2.textContent = `(${Math.floor(
-          100 - (el.price / el.strikedoffprice) * 100
-        )}% OFF)`;
-        small2.setAttribute("class", "red");
-        pricediv.append(p, small1, small2);
-        let carteditdiv=document.createElement('div');
-        carteditdiv.setAttribute('class','carteditdiv');
-        let rmvbtn = document.createElement("button");
+      } else {
+        cartData.map(function (el, index) {
+          let div = document.createElement("div");
+          let imgdiv = document.createElement("div");
+          imgdiv.setAttribute("class", imgdiv);
+          let image = document.createElement("img");
+          image.setAttribute("src", el.image_url);
+          imgdiv.append(image);
+          let detaildiv = document.createElement("div");
+          detaildiv.setAttribute("class", "detaildiv");
+          let h6 = document.createElement("h6");
+          h6.textContent = el.name;
+          let pricediv = document.createElement("div");
+          pricediv.setAttribute("class", "price_div");
+          let p = document.createElement("p");
+          p.textContent = `₹ ${el.price}`;
+          let small1 = document.createElement("small");
+          small1.textContent = `₹ ${el.strikedoffprice}`;
+          small1.setAttribute("class", "strikeoff");
+          let small2 = document.createElement("small");
+          small2.textContent = `(${Math.floor(
+            100 - (el.price / el.strikedoffprice) * 100
+          )}% OFF)`;
+          small2.setAttribute("class", "red");
+          pricediv.append(p, small1, small2);
+          let carteditdiv = document.createElement("div");
+          carteditdiv.setAttribute("class", "carteditdiv");
+          let rmvbtn = document.createElement("button");
           rmvbtn.setAttribute("class", "rmvbtn");
           rmvbtn.textContent = "Remove";
-          rmvbtn.addEventListener('click',function(){
-            cartData.splice(index,1);
-            localStorage.setItem('ls_cartData',JSON.stringify(cartData));
+          rmvbtn.addEventListener("click", function () {
+            cartData.splice(index, 1);
+            localStorage.setItem("ls_cartData", JSON.stringify(cartData));
             display(cartData);
             nav_functionality();
+          });
+          let quantitydiv = document.createElement("div");
+          quantitydiv.setAttribute("class", "quantitydiv");
+          p = document.createElement("p");
+          p.textContent = "Qty";
+          let div1 = document.createElement("div");
+          div1.textContent = "-";
+          div1.addEventListener("click", function () {
+            if (el.qty > 1) {
+              el.qty--;
+              localStorage.setItem("ls_cartData", JSON.stringify(cartData));
+              //  window.location.href="cart.html"
+              display(cartData);
+              nav_functionality();
+            }
+          });
+          let div2 = document.createElement("div");
+          div2.textContent = el.qty;
+          let div3 = document.createElement("div");
+          div3.textContent = "+";
+          div3.addEventListener("click", function () {
+            el.qty++;
+            localStorage.setItem("ls_cartData", JSON.stringify(cartData));
+            display(cartData);
+            nav_functionality();
+          });
+          quantitydiv.append(p, div1, div2, div3);
+          carteditdiv.append(rmvbtn, quantitydiv);
+          detaildiv.append(h6, pricediv, carteditdiv);
+          div.append(imgdiv, detaildiv);
+          document.querySelector(".cart-list").append(div);
         });
-        let quantitydiv=document.createElement('div');
-        quantitydiv.setAttribute('class','quantitydiv');
-        p=document.createElement('p');
-        p.textContent="Qty";
-        let div1=document.createElement('div');
-        div1.textContent="-";
-        div1.addEventListener('click',function(){
-          if(el.qty>1){
-            el.qty--;
-         localStorage.setItem("ls_cartData",JSON.stringify(cartData));
-        //  window.location.href="cart.html"
-        display(cartData);
-        nav_functionality();
-          }
-        
-        //  
-        });
-        let div2=document.createElement('div');
-        div2.textContent=el.qty;
-        let div3=document.createElement('div');
-        div3.textContent="+";
-        div3.addEventListener('click',function(){
-          el.qty++;
-        localStorage.setItem("ls_cartData",JSON.stringify(cartData));
-         display(cartData);
-         nav_functionality();
-        });
-        quantitydiv.append(p,div1,div2,div3);
-        carteditdiv.append(rmvbtn,quantitydiv);
-        detaildiv.append(h6, pricediv,carteditdiv);
-        div.append(imgdiv, detaildiv);
-        document.querySelector(".cart-list").append(div);
-        });
-         
-       var total_items=cartData.reduce(function(ac,el){
-            return ac+ Number(el.qty);  
-       },0);
-       document.querySelector(".itemcount").textContent=total_items;
-       
-
-      
-      var totalprice=cartData.reduce(function(ac,el){
-            return ac+ Number(el.strikedoffprice * el.qty);
-      },0);
-      document.querySelector(".totalprice").textContent=`₹ ${totalprice}.00`;
-      var discount=cartData.reduce(function(ac,el){
-            return ac+ Number((el.strikedoffprice * el.qty)-(el.price * el.qty));
-      },0);
-      document.querySelector(".discount").textContent=`- ₹ ${discount}.00`;
-      document.querySelector(".grandtotal").textContent=`₹ ${totalprice-discount}.00`; 
-      document.querySelector(".checkout").textContent=`${totalprice-discount}.00`;
-      document.querySelector(".saving").textContent=`You’re saving ₹${discount}.00!`;
       }
-  }
-    
+      var total_items = cartData.reduce(function (ac, el) {
+        return ac + Number(el.qty);
+      }, 0);
+      document.querySelector(".itemcount").textContent = total_items;
+      var totalprice = cartData.reduce(function (ac, el) {
+        return ac + Number(el.strikedoffprice * el.qty);
+      }, 0);
+      document.querySelector(".totalprice").textContent = `₹ ${totalprice}.00`;
+      var discount = cartData.reduce(function (ac, el) {
+        return ac + Number(el.strikedoffprice * el.qty - el.price * el.qty);
+      }, 0);
+      document.querySelector(".discount").textContent = `- ₹ ${discount}.00`;
+      document.querySelector(".grandtotal").textContent = `₹ ${
+        totalprice - discount
+      }.00`;
+      document.querySelector(".checkout").textContent = `${
+        totalprice - discount
+      }.00`;
+      document.querySelector(
+        ".saving"
+      ).textContent = `You’re saving ₹${discount}.00!`;
+    }
   </script>
 </html>
