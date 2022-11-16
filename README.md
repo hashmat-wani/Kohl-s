@@ -1,4 +1,5 @@
-In a span of 5 days, we created Kohl's Clone - American department store. It is fully functional from the users signing in using their email and password, adding items to the basket, checking their basket, removing items if needed and proceeding to checkout.
+A collaborative project (Kohl's Clone - American department store) built by a team of 4 members in 5 days. It is fully functional from the users signing in using their email and password, adding items to the basket, checking their basket, removing items if needed, and proceeding to checkout.
+- Fully responsive design - You are no longer dependent on computers, you can quickly search for information using various devices: laptops, smartphones, tablets, and even smartwatches. 
 
 **LANDING PAGE:**
 
